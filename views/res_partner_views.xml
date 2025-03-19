@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+    <record  id="res_partner_form_inherit" model="ir.ui.view">
+
+      <field name="name">res_partner_inherit</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+
+          <!-- Agrega campos al formulario de Compra -->
+          <xpath expr="//group/field[@name='vat']" position="after">
+              <field name="provider_key" placeholder="ej. PRO-000001"/>
+              <!--
+              <label for="monto_minimo" attrs="{'invisible':[('company_type', '!=', 'company')]}"/>
+              <div class="o_row" name="monto_minimo" attrs="{'invisible':[('company_type', '!=', 'company')]}">
+                <field name="monto_minimo"/>
+                <span><field name="unidad"/></span>
+              </div>
+              <label for="dias_credito" attrs="{'invisible':[('company_type', '!=', 'company')]}"/>
+              <div class="o_row" name="dias_credito" attrs="{'invisible':[('company_type', '!=', 'company')]}">
+                <field name="dias_credito"/>
+                <span>días</span>
+              </div>
+              <field name="dias_compra" attrs="{'invisible':[('company_type', '!=', 'company')]}"/>
+              <label for="leadtime" attrs="{'invisible':[('company_type', '!=', 'company')]}"/>
+              <div class="o_row" name="leadtime" attrs="{'invisible':[('company_type', '!=', 'company')]}">
+                <field name="leadtime"/>
+                <span>días</span>
+              </div>
+              -->
+          </xpath>
+          <xpath expr="//group[@name='purchase']" position="after">
+              <group>
+                  <field name="wb_supplier"/>
+              </group>
+          </xpath>
+
+      </field>
+    </record>
+    </data>
+</odoo>
