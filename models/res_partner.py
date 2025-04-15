@@ -17,3 +17,6 @@ class ResPartner(models.Model):
     #Claves
     wb_supplier = fields.Boolean(string='¿Es proveedor?', help='Marca si el usuario de compra es un Proveedor')
     provider_key = fields.Char(string='Clave de proveedor', help='Clave de Proveedor asignada')
+    advance_payment_date = fields.Integer(string='Días de financiamiento', help='Cantidad de días de financiamiento')
+    percent_supplier_advance = fields.Float(string='% Anticipo proveedor', help='Muestra el porcentaje de anticipo al proveedor')
+    lt_ag_channel = fields.Integer(string='LT Producción', help='LT Producción')
