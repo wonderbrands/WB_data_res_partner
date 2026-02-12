@@ -7,11 +7,11 @@
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
           <xpath expr="//field[@name='vat']" position="after">
-              <field name="provider_key" placeholder="ej. PRO-000001"/>
+              <field name="data_provider_key" placeholder="ej. PRO-000001"/>
           </xpath>
           <xpath expr="//group[@name='purchase']" position="after">
               <group>
-                  <field name="wb_supplier"/>
+                  <field name="data_wb_supplier"/>
               </group>
           </xpath>
       </field>
@@ -25,9 +25,9 @@
                 <!-- Agrega campos al formulario de Compra -->
                 <xpath expr="//group[@name='purchase']" position="after">
                     <group>
-                        <field name="advance_payment_date"/>
-                        <field name="percent_supplier_advance" widget="percentage"/>
-                        <field name="lt_ag_channel"/>
+                        <field name="data_advance_payment_date"/>
+                        <field name="data_percent_supplier_advance" widget="percentage"/>
+                        <field name="data_lt_ag_channel"/>
                     </group>
                 </xpath>
             </field>

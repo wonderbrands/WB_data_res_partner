@@ -19,10 +19,10 @@ class ResPartner(models.Model):
     leadtime = fields.Integer(string='Leadtime', help='Tiempo de entrega estimado del proveedor')
     '''
     #Claves
-    wb_supplier = fields.Boolean(string='¿Es proveedor?', help='Marca si el usuario de compra es un Proveedor')
-    provider_key = fields.Char(string='Clave de proveedor', help='Clave de Proveedor asignada')
+    data_wb_supplier = fields.Boolean(string='¿Es proveedor?', help='Marca si el usuario de compra es un Proveedor')
+    data_provider_key = fields.Char(string='Clave de proveedor', help='Clave de Proveedor asignada')
     
     # Campos de res_partner_extend
-    advance_payment_date = fields.Integer(string='Días de financiamiento', help='Cantidad de días de financiamiento')
-    percent_supplier_advance = fields.Float(string='% Anticipo proveedor', help='Muestra el porcentaje de anticipo al proveedor')
-    lt_ag_channel = fields.Integer(string='LT Producción', help='LT Producción')
+    data_advance_payment_date = fields.Integer(string='Días de financiamiento', help='Cantidad de días de financiamiento')
+    data_percent_supplier_advance = fields.Float(string='% Anticipo proveedor', help='Muestra el porcentaje de anticipo al proveedor')
+    data_lt_ag_channel = fields.Integer(string='LT Producción', help='LT Producción')
